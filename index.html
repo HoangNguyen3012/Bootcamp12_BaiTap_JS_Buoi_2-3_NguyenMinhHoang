@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="content" style="width: 70%; margin: 100px auto;">
+        <h1>Bài 1: Tính tiền lương nhân viên</h1>
+        <div class="form-group">
+            <label for="">Tiền lương một ngày</label>
+            <input type="number" class="form-control" name="" id="luong1Ngay" placeholder="Nhập tiền lương một ngày">
+            <small id="helpId" class="form-text text-muted">No decimal separator</small>
+        </div>
+        <!-- <div class="form-group">
+          <label for="">How much?</label>
+          <select class="form-control" name="" id="selectTipsValue">
+            <option disabled>Choose from list</option>
+            <option value="0.3">30% - Great</option>
+            <option value="0.2">20% - Good</option>
+            <option value="0.15">15% - Mediocre</option>
+            <option value="0.1">10% - Bad</option>
+            <option value=".05">5% - Horrible</option>
+          </select>
+        </div> -->
+        <div class="form-group">
+            <label for="">Bạn làm bao nhiêu ngày?</label>
+            <input type="number" name="" id="soNgayLam" class="form-control" placeholder="Nhập số ngày công"
+                placeholder="Input How Many">
+            <small id="helpId" class="text-muted">Integer</small>
+        </div>
+        <button class="btn btn-danger" id="ipCalculate">Tính lương tháng</button>
+        <div id="displayInfo">
+            <h4 style="margin: 20px 0;">Tiền lương tháng của bạn là <p  id="thuNhap" style="display: inline;"></p>VND</h4>
+            
+        </div>
+    </div>
+
+    <div class="content" style="width: 70%; margin: 100px auto;">
+        <h1>Bài 2: Tính trung bình 5 số thực</h1>
+        <div class="form-group">
+            <label for="">Số thực 1</label>
+            <input type="number" class="form-control" name="" id="soA" placeholder="Nhập số thực 1" value="">
+            <small id="helpId" class="form-text text-muted">No decimal separator</small>
+        </div>
+        <div class="form-group">
+            <label for="">Số thực 2</label>
+            <input type="number" class="form-control" name="" id="soB" placeholder="Nhập số thực 2" value="">
+            <small id="helpId" class="form-text text-muted">No decimal separator</small>
+        </div>
+        <div class="form-group">
+            <label for="">Số thực 3</label>
+            <input type="number" class="form-control" name="" id="soC" placeholder="Nhập số thực 3" value="">
+            <small id="helpId" class="form-text text-muted">No decimal separator</small>
+        </div>
+        <div class="form-group">
+            <label for="">Số thực 4</label>
+            <input type="number" class="form-control" name="" id="soD" placeholder="Nhập số thực 4" value="">
+            <small id="helpId" class="form-text text-muted">No decimal separator</small>
+        </div>
+        <div class="form-group">
+            <label for="">Số thực 5</label>
+            <input type="number" class="form-control" name="" id="soE" placeholder="Nhập số thực 5" value="">
+            <small id="helpId" class="form-text text-muted">No decimal separator</small>
+        </div>
+        
+        <button class="btn btn-danger" id="btnAverage">Tính trung bình</button>
+        <div id="displayAvg" style="display: none;">
+            <h4 style="margin: 20px 0;">Trung bình của 5 số đã nhập là <p  id="soTrungBinh" style="display: inline;"></p></h4>
+            
+        </div>
+    </div>
+
+    <div class="content" style="width: 70%; margin: 100px auto;">
+        <h1>Bài 3: Quy đổi tiền</h1>
+        <div class="form-group">
+            <label for="">Tiền quy đổi VND</label>
+            <input type="number" class="form-control" name="" id="quyDoiVND" placeholder="Nhập số tiền">
+            <small id="helpId" class="form-text text-muted"><p id="textTrigger">Ít vậy cũng đổi à?</p> </small>
+        </div>
+        <div class="form-group">
+          <label for="">Bạn muốn đơn vị tiền nào?</label>
+          <select class="form-control" name="" id="selectFx">
+            <option disabled>Choose from list</option>
+            <option value="USD" id="fxUSD">USD</option>
+            <option value="EUR" id="fxEUR">Euro</option>
+
+          </select>
+        </div>
+
+        <button class="btn btn-danger" id="fxCalculate">Đổi tiền</button>
+        <div id="displayExchange" style="display: none">
+            <h4 style="margin: 20px 0;;">Tiền quy đổi là <p  id="fxExchange" style="display: inline;"></p></h4>
+            
+        </div>
+    </div>
+
+    <div class="content" style="width: 70%; margin: 100px auto;">
+        <h1>Bài 4: Tính diện tích, chu vi hình chữ nhật</h1>
+        <div class="form-group">
+            <label for="">Nhập chiều dài</label>
+            <input type="number" class="form-control" name="" id="chieuDai" placeholder="Nhập chiều dài">
+            <small id="helpId" class="form-text text-muted">Chiều dài > chiều rộng</small>
+        </div>
+        <div class="form-group">
+          <label for="">Nhập chiều rộng</label>
+          <input type="number" name="" id="chieuRong" class="form-control" placeholder="Nhập chiều rộng" aria-describedby="helpId">
+          <small id="helpId" class="form-text text-muted">Chiều dài > chiều rộng</small>
+        </div>
+
+        <button class="btn btn-danger" id="SCalculate">Tính diện tích</button><br>
+        <div id="displayS" style="display: none">
+            <h4 style="margin: 20px 0;;">Diện tích là <p  id="textS" style="display: inline;"></p></h4>
+            
+        </div><br>
+
+        <button class="btn btn-danger" id="PCalculate">Tính chu vi</button><br>
+        <div id="displayP" style="display: none">
+            <h4 style="margin: 20px 0;;">Chu vi là <p  id="textP" style="display: inline;"></p></h4>
+            
+        </div><br>
+    </div>
+
+    <div class="content" style="width: 70%; margin: 100px auto;">
+        <h1>Bài 5: Tính tổng ký số</h1>
+        <div class="form-group">
+            <label for="">Nhập số có 2 chữ số</label>
+            <input type="number" class="form-control" name="" id="soAB" placeholder="Nhập số có 2 chữ số">
+            <small id="helpId" class="form-text text-muted">Có <b>2 chữ số</b> nha</small>
+        </div>
+
+        <button class="btn btn-danger" id="dgCalculate">Tính tổng ký số</button>
+        <div id="displaySum" style="display: none">
+            <h4 style="margin: 20px 0;;"><p  id="dgSum" style="display: inline;"></p></h4>
+            
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
